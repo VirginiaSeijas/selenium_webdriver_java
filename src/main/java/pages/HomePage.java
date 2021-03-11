@@ -31,8 +31,13 @@ public class HomePage {
         return new ForgotPasswordPage(driver);
     }
 
-    private void clickLink(String linktext){
-        driver.findElement(By.linkText(linktext)).click();
+    public KeyPressesPage clickKeyPresses(){
+        clickLink("Key Presses");
+        return new KeyPressesPage(driver);
+    }
+
+    private void clickLink(String linkText){
+        driver.findElement(By.linkText(linkText)).click();
     }
 
 }
