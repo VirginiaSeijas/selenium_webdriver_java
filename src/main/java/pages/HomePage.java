@@ -51,6 +51,12 @@ public class HomePage {
         return new FileUploadPage(driver);
     }
 
+    public ModalPage clickModal(){
+        driver.manage().deleteAllCookies();
+        clickLink("Entry Ad");
+        return new ModalPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
