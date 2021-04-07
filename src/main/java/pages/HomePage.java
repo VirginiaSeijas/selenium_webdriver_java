@@ -57,6 +57,12 @@ public class HomePage {
         return new ModalPage(driver);
     }
 
+    public ContextPage clickContext(){
+        driver.manage().deleteAllCookies();
+        clickLink("Context Menu");
+        return new ContextPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
