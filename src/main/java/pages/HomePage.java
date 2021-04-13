@@ -58,9 +58,13 @@ public class HomePage {
     }
 
     public ContextPage clickContext(){
-        driver.manage().deleteAllCookies();
-        clickLink("Context Menu");
+        clickLink("WYSIWYG Editor");
         return new ContextPage(driver);
+    }
+
+    public IframePage clickIframe(){
+        clickLink("WYSIWYG Editor");
+        return new IframePage(driver);
     }
 
     private void clickLink(String linkText){
