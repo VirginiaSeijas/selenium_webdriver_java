@@ -31,4 +31,3 @@ public class FrameTest extends BaseTest {
         assertEquals(nestedFramePage.getTitleFrameLeft(), "LEFT", "the title is not correct");
     }
 }
-// do the excercise about another frames
