@@ -67,6 +67,11 @@ public class HomePage {
         return new IframePage(driver);
     }
 
+    public FramesPage clickframe(){
+        clickLink("Frames");
+        return new FramesPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
