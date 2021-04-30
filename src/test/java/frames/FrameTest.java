@@ -2,6 +2,8 @@ package frames;
 
 import base.BaseTest;
 import org.testng.annotations.Test;
+import pages.FramesPage;
+import pages.NestedFramePage;
 
 import static org.testng.Assert.assertEquals;
 
@@ -20,5 +22,12 @@ public class FrameTest extends BaseTest {
         editorPage.setTextArea(text2);
 
         assertEquals(editorPage.getTextFromEditor(), text1 +text2, "The text of the frame is not correct");
+    }
+
+    @Test
+    public void testNestedFrames(){
+        FramesPage framesPage = homePage.clickframe();
+        NestedFramePage nestedFramePage = framesPage.clickNestedFrames();
+        assertEquals(nestedFramePage.getTitleFrameLeft(), "LEFT", "the title is not correct");
     }
 }
