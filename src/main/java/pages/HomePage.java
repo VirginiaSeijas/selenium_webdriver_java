@@ -67,9 +67,14 @@ public class HomePage {
         return new IframePage(driver);
     }
 
-    public FramesPage clickframe(){
+    public FramesPage clickFrame(){
         clickLink("Frames");
         return new FramesPage(driver);
+    }
+
+    public DynamicLoadingPage clickLoading(){
+        clickLink("Dynamic Loading");
+        return new DynamicLoadingPage(driver);
     }
 
     private void clickLink(String linkText){
