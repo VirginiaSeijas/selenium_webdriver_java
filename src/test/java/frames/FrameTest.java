@@ -26,7 +26,7 @@ public class FrameTest extends BaseTest {
 
     @Test
     public void testNestedFrames(){
-        FramesPage framesPage = homePage.clickframe();
+        FramesPage framesPage = homePage.clickFrame();
         NestedFramePage nestedFramePage = framesPage.clickNestedFrames();
         assertEquals(nestedFramePage.getTitleFrameLeft(), "LEFT", "the title is not correct");
     }
