@@ -82,6 +82,11 @@ public class HomePage {
         return new LargeDeepDomPage(driver);
     }
 
+    public InfiniteScrollPage clickInfiniteScroll(){
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
     private void clickLink(String linkText){
         driver.findElement(By.linkText(linkText)).click();
     }
